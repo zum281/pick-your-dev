@@ -10,6 +10,7 @@ As we all know, the most important thing you need to find your place in the fron
 [ ] Update cards every match
 [ ] UI improvements
 [ ] Results screen
+[ ] Tests setup
 
 ### v2
 
