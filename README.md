@@ -2,7 +2,7 @@
 
 As we all know, the most important thing you need to find your place in the front-end world, is to find out what your favorite framework is.
 
-## TODO
+## Roadmap
 
 ### v1
 
@@ -11,6 +11,7 @@ As we all know, the most important thing you need to find your place in the fron
 [ ] UI improvements
 [ ] Results screen
 [ ] Tests setup
+[ ] Deploy
 
 ### v2
 
@@ -18,6 +19,8 @@ As we all know, the most important thing you need to find your place in the fron
 [ ] Backend quiz
 [ ] Programming language quiz
 [ ] Select quiz page
+[ ] Tests
+[ ] Deploy
 
 ### v3
 
@@ -26,8 +29,12 @@ As we all know, the most important thing you need to find your place in the fron
 [ ] Save results of quizzes to db
 [ ] Show summary ("your stack") in profile page
 [ ] Retake quiz
+[ ] Tests
+[ ] Deploy
 
 ### v4
 
 [ ] History of quizzes played = graph per quiz with history of results
 [ ] Filter options on quizzes
+[ ] Tests
+[ ] Deploy
