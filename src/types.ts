@@ -1,21 +1,8 @@
-import type { RootState } from "./redux/store";
+import type { ALL_FE_FRAMEWORKS } from "@/config";
+import type { RootState } from "@/redux/store";
 
-export type FeFrameworkKey =
-  | "alpine"
-  | "angular"
-  | "astro"
-  | "fresh"
-  | "gatsby"
-  | "lit"
-  | "nextjs"
-  | "nuxtjs"
-  | "qwik"
-  | "react"
-  | "remix"
-  | "solidjs"
-  | "svelte"
-  | "sveltekit"
-  | "vue";
+type FeFrameworkKeyTuple = typeof ALL_FE_FRAMEWORKS;
+export type FeFrameworkKey = FeFrameworkKeyTuple[number];
 
 export type Framework = {
   id: FeFrameworkKey;

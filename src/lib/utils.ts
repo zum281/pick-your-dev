@@ -7,10 +7,13 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const getFrameworkFromId = (id: FeFrameworkKey): Framework =>
-  feFrameworks.find((framework) => framework.id === id)!;
+export const getFrameworkFromId = (id: FeFrameworkKey): Framework => {
+  return feFrameworks.find((framework) => framework.id === id)!;
+};
 
-export const getFrameworksRanking = (scores: GameState["scores"]) => {
+export const getFrameworksRanking = (
+  scores: GameState["scores"],
+): { framework: Framework; score: number }[] => {
   return Object.entries(scores)
     .map(([framework, score]) => ({
       framework: getFrameworkFromId(framework as FeFrameworkKey),
