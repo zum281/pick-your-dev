@@ -387,24 +387,6 @@ describe("calculatePairValue", () => {
     });
 
     it("should work with all actual framework names", () => {
-      const allFrameworks: FeFrameworkKey[] = [
-        "alpine",
-        "angular",
-        "astro",
-        "fresh",
-        "gatsby",
-        "lit",
-        "nextjs",
-        "nuxtjs",
-        "qwik",
-        "react",
-        "remix",
-        "solidjs",
-        "svelte",
-        "sveltekit",
-        "vue",
-      ];
-
       const gameState = createGameState();
 
       // Test a few representative pairs
