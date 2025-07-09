@@ -58,6 +58,7 @@ const calculatePairValue = ({
   const [a, b] = pair;
   const scoreA = scores[a];
   const scoreB = scores[b];
+
   // 1. Uncertainty value: pairs with similar scores are more informative
   const scoreDiff = Math.abs(scoreA - scoreB);
   const uncertaintyValue = Math.max(0, 600 - scoreDiff); // Higher value for closer scores
@@ -76,6 +77,7 @@ const calculatePairValue = ({
     history,
     currentRound,
   });
+
   const bLastSeen = getFrameworkLastSeen({
     framework: b,
     history,

@@ -10,7 +10,7 @@ import {
   historySelector,
   scoresSelector,
 } from "@/redux/selectors";
-import type { FeFrameworkKey, MatchHistory } from "@/types";
+import type { FeFrameworkKey, FeFrameworkPair, MatchHistory } from "@/types";
 import { getNextMatch } from "@/lib/next-match";
 import { calculateScoreChanges } from "./lib/elo";
 import { Results } from "@/components/Results";
@@ -19,13 +19,24 @@ import { MAX_ROUNDS } from "./config";
 import { MatchCard } from "./components/MatchCard";
 import { Text } from "@/components/ui/text";
 import { Layout } from "@/components/Layout";
+import { Button } from "./components/ui/button";
 
 function App() {
   const dispatch = useAppDispatch();
   const scores = useAppSelector(scoresSelector);
   const history = useAppSelector(historySelector);
   const currentRound = useAppSelector(currentRoundSelector);
+  const matchingPair = getNextMatch({ scores, history, currentRound });
 
+  const tieMatch = (pair: FeFrameworkPair) => {
+    dispatch(updateCurrentRound());
+    const matchup: MatchHistory = {
+      pair,
+      round: currentRound,
+      winner: null,
+    };
+    dispatch(updateHistory(matchup));
+  };
   const playMatch = (winnerId: FeFrameworkKey, loserId: FeFrameworkKey) => {
     const scoreChanges = calculateScoreChanges({
       winnerScore: scores[winnerId],
@@ -49,7 +60,6 @@ function App() {
 
   const progressValue = (currentRound * 100) / MAX_ROUNDS;
 
-  const matchingPair = getNextMatch({ scores, history, currentRound });
   if (!matchingPair)
     return (
       <Layout>
@@ -77,6 +87,12 @@ function App() {
             />
           ))}
         </div>
+        <Button
+          variant="link"
+          className="text-muted-foreground font-normal text-sm place-self-center"
+          onClick={() => tieMatch(matchingPair)}>
+          I don't care about any of them
+        </Button>
       </Layout>
       <Progress value={progressValue} className="absolute top-0 border-none" />
     </>

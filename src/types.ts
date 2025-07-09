@@ -28,7 +28,7 @@ export type FeFrameworkPair = [FeFrameworkKey, FeFrameworkKey];
 export type MatchHistory = {
   pair: FeFrameworkPair;
   round: number;
-  winner: FeFrameworkKey;
+  winner: FeFrameworkKey | null;
 };
 
 export type GameState = RootState["scores"];
