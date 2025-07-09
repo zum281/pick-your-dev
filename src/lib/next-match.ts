@@ -1,5 +1,5 @@
 import { MAX_ROUNDS } from "@/config";
-import type { FeFrameworkKey, GameState } from "@/types";
+import type { FeFrameworkKey, FeFrameworkPair, GameState } from "@/types";
 export const getNextMatch = (
   gameState: GameState,
 ): [FeFrameworkKey, FeFrameworkKey] | null => {
@@ -51,7 +51,7 @@ const calculatePairValue = ({
   pair,
   gameState,
 }: {
-  pair: [FeFrameworkKey, FeFrameworkKey];
+  pair: FeFrameworkPair;
   gameState: GameState;
 }) => {
   const { currentRound, history, scores } = gameState;
@@ -61,23 +61,14 @@ const calculatePairValue = ({
 
   // 1. Uncertainty value: pairs with similar scores are more informative
   const scoreDiff = Math.abs(scoreA - scoreB);
-  const uncertaintyValue = Math.max(0, 600 - scoreDiff); // Higher value for closer scores
+  const uncertaintyValue = Math.max(0, 600 - scoreDiff);
 
-  // 2. Recency penalty: avoid showing the same pair too soon
-  const roundsSinceLastSeen = getRoundsSinceLastSeen({
-    pair,
-    history,
-    currentRound,
-  });
-  const recencyBonus = Math.min(roundsSinceLastSeen * 50, 300); // Cap the bonus
-
-  // 3. Participation bonus: frameworks that haven't been seen recently
+  // 2. Participation bonus: frameworks that haven't been seen recently
   const aLastSeen = getFrameworkLastSeen({
     framework: a,
     history,
     currentRound,
   });
-
   const bLastSeen = getFrameworkLastSeen({
     framework: b,
     history,
@@ -85,7 +76,8 @@ const calculatePairValue = ({
   });
   const participationBonus = Math.min(aLastSeen + bLastSeen, 200);
 
-  return uncertaintyValue + recencyBonus + participationBonus;
+  // No recency bonus needed - we're only dealing with unseen pairs!
+  return uncertaintyValue + participationBonus;
 };
 
 const getFrameworkLastSeen = ({
