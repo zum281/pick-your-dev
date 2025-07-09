@@ -17,6 +17,43 @@ As we all know, the most important thing you need to find your place in the fron
 - [x] Tests setup
 - [x] Deploy
 
+### v1.1
+
+#### v1.1.1
+
+- [ ] Mobile responsiveness
+- [ ] Hover/active states polish
+- [ ] Keyboard navigation for quiz interactions
+- [ ] Restart quiz button
+
+#### v1.1.2
+
+- [ ] Screen reader support
+- [ ] Color contrast validation
+- [ ] Focus management between matches
+
+#### v1.1.3
+
+- [ ] "Why this ranking?" insights
+- [ ] Social sharing functionality
+
+#### v1.1.4
+
+- [ ] Smooth transitions between matches
+- [ ] Result reveal animations
+- [ ] Progress bar animations
+
+#### v1.1.5
+
+- [ ] Meta tags for social sharing
+- [ ] Open Graph images
+- [ ] Analytics setup (optional)
+
+#### DX
+
+- [ ] Tests for new features (each patch)
+- [ ] Deploy each patch independently
+
 ### v2
 
 - [ ] Routing
