@@ -3,13 +3,26 @@ import type { FeFrameworkKey, GameState } from "@/types";
 export const getNextMatch = (
   gameState: GameState,
 ): [FeFrameworkKey, FeFrameworkKey] | null => {
-  const { currentRound, scores } = gameState;
+  const { currentRound, scores, history } = gameState;
   if (currentRound >= MAX_ROUNDS) return null;
 
   const frameworks = Object.keys(scores) as FeFrameworkKey[];
   const pairs = getAllPairs(frameworks);
 
-  const pairValues = pairs.map((pair) => {
+  // Filter out pairs that have already been seen
+  const unseenPairs = pairs.filter((pair) => {
+    const roundsSinceLastSeen = getRoundsSinceLastSeen({
+      pair,
+      history,
+      currentRound,
+    });
+    return roundsSinceLastSeen === Infinity;
+  });
+
+  if (unseenPairs.length === 0) {
+    return null;
+  }
+  const pairValues = unseenPairs.map((pair) => {
     return {
       pair,
       value: calculatePairValue({ pair, gameState }),

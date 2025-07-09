@@ -27,12 +27,6 @@ function App() {
   const currentRound = useAppSelector(currentRoundSelector);
 
   const playMatch = (winnerId: FeFrameworkKey, loserId: FeFrameworkKey) => {
-    const matchup: MatchHistory = {
-      pair: [winnerId, loserId],
-      round: currentRound,
-      winner: winnerId,
-    };
-
     const scoreChanges = calculateScoreChanges({
       winnerScore: scores[winnerId],
       loserScore: scores[loserId],
@@ -45,6 +39,11 @@ function App() {
       loseMatch({ framework: loserId, scoreChange: scoreChanges.loserChange }),
     );
     dispatch(updateCurrentRound());
+    const matchup: MatchHistory = {
+      pair: [winnerId, loserId],
+      round: currentRound,
+      winner: winnerId,
+    };
     dispatch(updateHistory(matchup));
   };
 
