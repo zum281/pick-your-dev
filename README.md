@@ -7,7 +7,9 @@ As we all know, the most important thing you need to find your place in the fron
 ### v1
 
 [x] User click changes score
-[ ] Update cards every match
+[x] Update cards every match
+[x] Improve algorithm to pick next match
+[ ] Improve score assignment
 [ ] UI improvements
 [ ] Results screen
 [ ] Tests setup

@@ -1,9 +1,10 @@
 import { createSelector } from "@reduxjs/toolkit";
 import type { RootState } from "./store";
 
-export const scoresSelector = (state: RootState) =>
-  state.scores.scores as Record<string, number>;
-
+export const scoresSelector = (state: RootState) => state.scores.scores;
+export const historySelector = (state: RootState) => state.scores.history;
+export const currentRoundSelector = (state: RootState) =>
+  state.scores.currentRound;
 // export const filteredConfigsSelector = createSelector(
 //   [savedConfigsSelector, filtersSelector],
 //   (configs, filters) => {
