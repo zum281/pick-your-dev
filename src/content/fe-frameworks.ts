@@ -12,6 +12,7 @@ import Remix from "@/assets/remix.svg";
 import SolidJs from "@/assets/solidjs.svg";
 import Svelte from "@/assets/svelte.svg";
 import Vue from "@/assets/vue.svg";
+import type { FeFrameworkKey } from "@/types";
 
 export const feFrameworks: Framework[] = [
   { id: "alpine", name: "Alpine.js", logo: Alpine },
@@ -32,7 +33,7 @@ export const feFrameworks: Framework[] = [
 ];
 
 export type Framework = {
-  id: string;
+  id: FeFrameworkKey;
   name: string;
   logo: string;
 };

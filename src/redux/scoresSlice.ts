@@ -1,9 +1,14 @@
+import type { FeFrameworkKey } from "@/types";
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 const BASE_SCORE = 1500;
 const SCORE_INCREMENT = 50;
 
-const initialState: { scores: Record<string, number> } = {
+const initialState: {
+  scores: Record<FeFrameworkKey, number>;
+  history: [];
+  currentRound: number;
+} = {
   scores: {
     alpine: BASE_SCORE,
     angular: BASE_SCORE,
@@ -21,16 +26,18 @@ const initialState: { scores: Record<string, number> } = {
     sveltekit: BASE_SCORE,
     vue: BASE_SCORE,
   },
+  history: [], // start empty
+  currentRound: 0,
 };
 
 export const scoresSlice = createSlice({
   name: "scores",
   initialState,
   reducers: {
-    winMatch: (state, action: PayloadAction<string>) => {
+    winMatch: (state, action: PayloadAction<FeFrameworkKey>) => {
       state.scores[action.payload] += SCORE_INCREMENT;
     },
-    loseMatch: (state, action: PayloadAction<string>) => {
+    loseMatch: (state, action: PayloadAction<FeFrameworkKey>) => {
       state.scores[action.payload] -= SCORE_INCREMENT;
     },
   },

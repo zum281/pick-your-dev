@@ -1,0 +1,16 @@
+export type FeFrameworkKey =
+  | "alpine"
+  | "angular"
+  | "astro"
+  | "fresh"
+  | "gatsby"
+  | "lit"
+  | "nextjs"
+  | "nuxtjs"
+  | "qwik"
+  | "react"
+  | "remix"
+  | "solidjs"
+  | "svelte"
+  | "sveltekit"
+  | "vue";
