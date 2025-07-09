@@ -17,8 +17,8 @@ export const getNextMatch = (
   });
   pairValues.sort((a, b) => b.value - a.value);
 
-  const randomIndex = Math.floor(Math.random() * pairValues.length);
   const topCandidates = pairValues.slice(0, Math.min(3, pairValues.length));
+  const randomIndex = Math.floor(Math.random() * topCandidates.length);
   return topCandidates[randomIndex].pair;
 };
 

@@ -51,11 +51,12 @@ function App() {
           })}
       </ul>
     );
+
   return (
     <main className="space-y-2 p-4">
-      <div>
+      <ul>
         {matchingPair.map((framework, index) => (
-          <div key={framework}>
+          <li key={framework}>
             <h2>{getFrameworkFromId(framework).name}</h2>
             <button
               onClick={() =>
@@ -66,9 +67,9 @@ function App() {
               }>
               Select
             </button>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </main>
   );
 }
