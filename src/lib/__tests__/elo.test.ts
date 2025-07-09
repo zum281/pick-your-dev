@@ -54,8 +54,8 @@ describe("calculateScoreChanges", () => {
     // 1 / (1 + 10^((1000-2000)/400)) = 1 / (1 + 10^(-2.5)) = 1 / (1 + 0.00316227766) = 1 / 1.00316227766 = 0.99684719
     // winnerChange = Math.round(32 * (1 - 0.99684719)) = Math.round(32 * 0.00315281) = Math.round(0.10088992) = 0
     // loserChange = Math.round(32 * (0 - (1 - 0.99684719))) = Math.round(32 * (-0.00315281)) = Math.round(-0.10088992) = 0
-    expect(winnerChange).toBeCloseTo(0);
-    expect(loserChange).toBeCloseTo(0);
+    expect(Math.abs(winnerChange)).toBe(0);
+    expect(Math.abs(loserChange)).toBe(0);
   });
 
   // Test case 5: Loser has a much higher score (big upset)
