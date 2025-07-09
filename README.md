@@ -9,9 +9,11 @@ As we all know, the most important thing you need to find your place in the fron
 [x] User click changes score
 [x] Update cards every match
 [x] Improve algorithm to pick next match
-[ ] Improve score assignment
-[ ] UI improvements
-[ ] Results screen
+[x] Improve score assignment
+[x] Results screen
+[x] UI improvements - Quiz
+[ ] UI improvenets - Results
+[ ] Better logos
 [ ] Tests setup
 [ ] Deploy
 

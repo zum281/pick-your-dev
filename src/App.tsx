@@ -12,8 +12,12 @@ import {
 } from "@/redux/selectors";
 import type { FeFrameworkKey, MatchHistory } from "@/types";
 import { getNextMatch } from "@/lib/next-match";
-import { getFrameworkFromId } from "@/lib/utils";
 import { calculateScoreChanges } from "./lib/elo";
+import { Results } from "@/components/Results";
+import { Progress } from "@/components/ui/progress";
+import { MAX_ROUNDS } from "./config";
+import { MatchCard } from "./components/MatchCard";
+import { Text } from "@/components/ui/text";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -43,43 +47,33 @@ function App() {
     dispatch(updateHistory(matchup));
   };
 
+  const progressValue = (currentRound * 100) / MAX_ROUNDS;
+
   const matchingPair = getNextMatch({ scores, history, currentRound });
-  if (!matchingPair)
-    return (
-      <ul>
-        {Object.keys(scores)
-          .sort((a, b) =>
-            scores[a as FeFrameworkKey] < scores[b as FeFrameworkKey] ? 1 : -1,
-          )
-          .map((framework) => {
-            const score = scores[framework as FeFrameworkKey];
-            return (
-              <li key={framework}>
-                {getFrameworkFromId(framework as FeFrameworkKey).name}: {score}
-              </li>
-            );
-          })}
-      </ul>
-    );
+  if (!matchingPair) return <Results />;
 
   return (
-    <main className="space-y-2 p-4">
-      <ul>
-        {matchingPair.map((framework, index) => (
-          <li key={framework}>
-            <h2>{getFrameworkFromId(framework).name}</h2>
-            <button
-              onClick={() =>
+    <main className="h-screen">
+      <section className="gap-16 p-4 mx-auto max-w-xl grid place-content-center h-full">
+        <Text as="h1" className="font-medium">
+          Pick your favorite!
+        </Text>
+        <div className="flex flex-wrap gap-4 items-center justify-center">
+          {matchingPair.map((framework, index) => (
+            <MatchCard
+              key={framework}
+              frameworkId={framework}
+              onSelect={() =>
                 playMatch(
                   matchingPair[index],
                   matchingPair[index === 0 ? 1 : 0],
                 )
-              }>
-              Select
-            </button>
-          </li>
-        ))}
-      </ul>
+              }
+            />
+          ))}
+        </div>
+      </section>
+      <Progress value={progressValue} className="absolute top-0 border-none" />
     </main>
   );
 }
