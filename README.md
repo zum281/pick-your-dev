@@ -19,31 +19,31 @@ As we all know, the most important thing you need to find your place in the fron
 
 ### v1.1
 
-#### v1.1.1
+#### v1.0.1
 
 - [ ] Mobile responsiveness
 - [ ] Hover/active states polish
 - [ ] Keyboard navigation for quiz interactions
 - [ ] Restart quiz button
 
-#### v1.1.2
+#### v1.0.2
 
 - [ ] Screen reader support
 - [ ] Color contrast validation
 - [ ] Focus management between matches
 
-#### v1.1.3
+#### v1.0.3
 
 - [ ] "Why this ranking?" insights
 - [ ] Social sharing functionality
 
-#### v1.1.4
+#### v1.0.4
 
 - [ ] Smooth transitions between matches
 - [ ] Result reveal animations
 - [ ] Progress bar animations
 
-#### v1.1.5
+#### v1.1.0
 
 - [ ] Meta tags for social sharing
 - [ ] Open Graph images
