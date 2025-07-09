@@ -12,7 +12,7 @@ As we all know, the most important thing you need to find your place in the fron
 [x] Improve score assignment
 [x] Results screen
 [x] UI improvements - Quiz
-[ ] UI improvenets - Results
+[x] UI improvements - Results
 [ ] Better logos
 [ ] Tests setup
 [ ] Deploy
