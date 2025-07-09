@@ -1,5 +1,6 @@
 import { MAX_ROUNDS } from "@/config";
 import type { FeFrameworkKey, FeFrameworkPair, GameState } from "@/types";
+
 export const getNextMatch = (
   gameState: GameState,
 ): [FeFrameworkKey, FeFrameworkKey] | null => {
@@ -35,7 +36,7 @@ export const getNextMatch = (
   return topCandidates[randomIndex].pair;
 };
 
-const getAllPairs = (frameworks: FeFrameworkKey[]) => {
+export const getAllPairs = (frameworks: FeFrameworkKey[]) => {
   const pairs: [FeFrameworkKey, FeFrameworkKey][] = [];
 
   for (let i = 0; i < frameworks.length; i++) {
@@ -47,7 +48,7 @@ const getAllPairs = (frameworks: FeFrameworkKey[]) => {
   return pairs;
 };
 
-const calculatePairValue = ({
+export const calculatePairValue = ({
   pair,
   gameState,
 }: {
@@ -80,7 +81,7 @@ const calculatePairValue = ({
   return uncertaintyValue + participationBonus;
 };
 
-const getFrameworkLastSeen = ({
+export const getFrameworkLastSeen = ({
   framework,
   history,
   currentRound,
@@ -97,7 +98,7 @@ const getFrameworkLastSeen = ({
   return Infinity;
 };
 
-const getRoundsSinceLastSeen = ({
+export const getRoundsSinceLastSeen = ({
   pair,
   history,
   currentRound,
@@ -119,5 +120,5 @@ const getRoundsSinceLastSeen = ({
   return Infinity;
 };
 
-const normalizePair = (pair: [FeFrameworkKey, FeFrameworkKey]) =>
+export const normalizePair = (pair: [FeFrameworkKey, FeFrameworkKey]) =>
   pair[0] < pair[1] ? pair : [pair[1], pair[0]];
