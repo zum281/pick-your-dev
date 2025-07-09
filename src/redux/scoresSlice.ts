@@ -1,4 +1,4 @@
-import { BASE_SCORE, SCORE_INCREMENT } from "@/config";
+import { BASE_SCORE } from "@/config";
 import type { FeFrameworkKey, MatchHistory } from "@/types";
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
@@ -32,11 +32,17 @@ export const scoresSlice = createSlice({
   name: "scores",
   initialState,
   reducers: {
-    winMatch: (state, action: PayloadAction<FeFrameworkKey>) => {
-      state.scores[action.payload] += SCORE_INCREMENT;
+    winMatch: (
+      state,
+      action: PayloadAction<{ framework: FeFrameworkKey; scoreChange: number }>,
+    ) => {
+      state.scores[action.payload.framework] += action.payload.scoreChange;
     },
-    loseMatch: (state, action: PayloadAction<FeFrameworkKey>) => {
-      state.scores[action.payload] -= SCORE_INCREMENT;
+    loseMatch: (
+      state,
+      action: PayloadAction<{ framework: FeFrameworkKey; scoreChange: number }>,
+    ) => {
+      state.scores[action.payload.framework] -= action.payload.scoreChange;
     },
     updateCurrentRound: (state) => {
       state.currentRound += 1;

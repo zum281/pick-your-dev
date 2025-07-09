@@ -1,18 +1,19 @@
-import { useAppDispatch, useAppSelector } from "./redux/hooks";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import {
   loseMatch,
   updateCurrentRound,
   updateHistory,
   winMatch,
-} from "./redux/scoresSlice";
+} from "@/redux/scoresSlice";
 import {
   currentRoundSelector,
   historySelector,
   scoresSelector,
-} from "./redux/selectors";
-import type { FeFrameworkKey, MatchHistory } from "./types";
-import { getNextMatch } from "./lib/elo";
-import { getFrameworkFromId } from "./lib/utils";
+} from "@/redux/selectors";
+import type { FeFrameworkKey, MatchHistory } from "@/types";
+import { getNextMatch } from "@/lib/next-match";
+import { getFrameworkFromId } from "@/lib/utils";
+import { calculateScoreChanges } from "./lib/elo";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -27,8 +28,17 @@ function App() {
       winner: winnerId,
     };
 
-    dispatch(winMatch(winnerId));
-    dispatch(loseMatch(loserId));
+    const scoreChanges = calculateScoreChanges({
+      winnerScore: scores[winnerId],
+      loserScore: scores[loserId],
+    });
+
+    dispatch(
+      winMatch({ framework: winnerId, scoreChange: scoreChanges.winnerChange }),
+    );
+    dispatch(
+      loseMatch({ framework: loserId, scoreChange: scoreChanges.loserChange }),
+    );
     dispatch(updateCurrentRound());
     dispatch(updateHistory(matchup));
   };
