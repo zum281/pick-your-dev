@@ -18,6 +18,7 @@ import { Progress } from "@/components/ui/progress";
 import { MAX_ROUNDS } from "./config";
 import { MatchCard } from "./components/MatchCard";
 import { Text } from "@/components/ui/text";
+import { Layout } from "@/components/Layout";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -50,12 +51,17 @@ function App() {
   const progressValue = (currentRound * 100) / MAX_ROUNDS;
 
   const matchingPair = getNextMatch({ scores, history, currentRound });
-  if (!matchingPair) return <Results />;
+  if (!matchingPair)
+    return (
+      <Layout>
+        <Results />
+      </Layout>
+    );
 
   return (
-    <main className="h-screen">
-      <section className="gap-16 p-4 mx-auto max-w-xl grid place-content-center h-full">
-        <Text as="h1" className="font-medium">
+    <>
+      <Layout>
+        <Text as="h1" className="font-medium text-center">
           Pick your favorite!
         </Text>
         <div className="flex flex-wrap gap-4 items-center justify-center">
@@ -72,9 +78,9 @@ function App() {
             />
           ))}
         </div>
-      </section>
+      </Layout>
       <Progress value={progressValue} className="absolute top-0 border-none" />
-    </main>
+    </>
   );
 }
 
