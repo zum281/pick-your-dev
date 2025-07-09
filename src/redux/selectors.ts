@@ -1,4 +1,4 @@
-import { createSelector } from "@reduxjs/toolkit";
+// import { createSelector } from "@reduxjs/toolkit";
 import type { RootState } from "./store";
 
 export const scoresSelector = (state: RootState) => state.scores.scores;
