@@ -15,7 +15,7 @@ As we all know, the most important thing you need to find your place in the fron
 - [x] UI improvements - Results
 - [x] Better logos
 - [x] Tests setup
-- [ ] Deploy
+- [x] Deploy
 
 ### v2
 
