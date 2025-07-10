@@ -1,10 +1,12 @@
 import { getFrameworksRanking } from "@/lib/utils";
-import { useAppSelector } from "@/redux/hooks";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { scoresSelector } from "@/redux/selectors";
 import type { FC } from "react";
 import { Text } from "./ui/text";
+import { resetGame } from "@/redux/scoresSlice";
 
 export const Results: FC = () => {
+  const dispatch = useAppDispatch();
   const scores = useAppSelector(scoresSelector);
   const ranking = getFrameworksRanking(scores);
   const frameworkNameClass = (rank: number) => {
@@ -18,6 +20,10 @@ export const Results: FC = () => {
       default:
         return "text-md font-light";
     }
+  };
+
+  const restartGame = () => {
+    dispatch(resetGame());
   };
 
   return (
@@ -52,6 +58,7 @@ export const Results: FC = () => {
           </li>
         ))}
       </ul>
+      <Button onClick={restartGame}>Play again!</Button>
     </>
   );
 };

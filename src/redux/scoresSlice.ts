@@ -50,9 +50,15 @@ export const scoresSlice = createSlice({
     updateHistory: (state, action: PayloadAction<MatchHistory>) => {
       state.history.push(action.payload);
     },
+    resetGame: () => initialState,
   },
 });
 
-export const { winMatch, loseMatch, updateCurrentRound, updateHistory } =
-  scoresSlice.actions;
+export const {
+  winMatch,
+  loseMatch,
+  updateCurrentRound,
+  updateHistory,
+  resetGame,
+} = scoresSlice.actions;
 export const scoresReducer = scoresSlice.reducer;
