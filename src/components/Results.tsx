@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { scoresSelector } from "@/redux/selectors";
 import type { FC } from "react";
 import { Text } from "./ui/text";
+import { Button } from "./ui/button";
 import { resetGame } from "@/redux/scoresSlice";
 
 export const Results: FC = () => {
@@ -12,7 +13,7 @@ export const Results: FC = () => {
   const frameworkNameClass = (rank: number) => {
     switch (rank) {
       case 0:
-        return "text-4xl font-bold tracking-wider";
+        return "text-4xl font-black";
       case 1:
         return "text-3xl font-semibold";
       case 2:
