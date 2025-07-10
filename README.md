@@ -36,7 +36,7 @@ As we all know, the most important thing you need to find your place in the fron
 
 - [ ] "Why this ranking?" insights
 - [ ] Social sharing functionality
-- [ ] Improve ranking algorithm
+- [ ] Improve ranking algorithm, there are still a lot of draws (possibly due to tie match feature)
 
 #### v1.0.4
 
