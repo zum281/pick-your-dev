@@ -42,7 +42,7 @@ export const scoresSlice = createSlice({
       state,
       action: PayloadAction<{ framework: FeFrameworkKey; scoreChange: number }>,
     ) => {
-      state.scores[action.payload.framework] -= action.payload.scoreChange;
+      state.scores[action.payload.framework] += action.payload.scoreChange;
     },
     updateCurrentRound: (state) => {
       state.currentRound += 1;
