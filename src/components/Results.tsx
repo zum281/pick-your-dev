@@ -38,7 +38,7 @@ export const Results: FC = () => {
                 aria-labelledby={framework.framework.id}
                 src={framework.framework.logo}
                 width="24"
-                className="inline-block mr-4"
+                className="inline-block mr-4 max-sm:hidden"
               />
               <span
                 className={frameworkNameClass(index)}

@@ -21,7 +21,7 @@ As we all know, the most important thing you need to find your place in the fron
 
 #### v1.0.1
 
-- [ ] Mobile responsiveness
+- [x] Mobile responsiveness
 - [ ] Hover/active states polish
 - [ ] Keyboard navigation for quiz interactions
 - [ ] Restart quiz button
