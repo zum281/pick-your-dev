@@ -23,8 +23,8 @@ As we all know, the most important thing you need to find your place in the fron
 
 - [x] Mobile responsiveness
 - [x] Keyboard navigation for quiz interactions
-- [ ] Hover/active states polish
-- [ ] Restart quiz button
+- [x] Restart quiz button
+- [x] Hover/active states polish
 
 #### v1.0.2
 
@@ -36,6 +36,7 @@ As we all know, the most important thing you need to find your place in the fron
 
 - [ ] "Why this ranking?" insights
 - [ ] Social sharing functionality
+- [ ] Improve ranking algorithm
 
 #### v1.0.4
 
@@ -48,6 +49,8 @@ As we all know, the most important thing you need to find your place in the fron
 - [ ] Meta tags for social sharing
 - [ ] Open Graph images
 - [ ] Analytics setup (optional)
+- [ ] Social preview for GitHub
+- [ ] Legal things? (privacy policy? whatever etc.)
 
 #### DX
 
