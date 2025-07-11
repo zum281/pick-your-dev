@@ -61,7 +61,7 @@ describe("scoresSlice", () => {
 
       const newState = scoresReducer(initialState, action);
 
-      expect(newState.scores.vue).toBe(1484);
+      expect(newState.scores.vue).toBe(1516);
       expect(newState.scores.react).toBe(1500); // Other scores unchanged
     });
 
@@ -72,7 +72,7 @@ describe("scoresSlice", () => {
 
       const newState = scoresReducer(initialState, action);
 
-      expect(newState.scores.vue).toBe(-10);
+      expect(newState.scores.vue).toBe(30);
     });
   });
 

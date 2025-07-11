@@ -15,7 +15,47 @@ As we all know, the most important thing you need to find your place in the fron
 - [x] UI improvements - Results
 - [x] Better logos
 - [x] Tests setup
-- [ ] Deploy
+- [x] Deploy
+
+### v1.1
+
+#### v1.0.1
+
+- [x] Mobile responsiveness
+- [x] Keyboard navigation for quiz interactions
+- [x] Restart quiz button
+- [x] Hover/active states polish
+
+#### v1.0.2
+
+- [ ] Screen reader support
+- [ ] Color contrast validation
+- [ ] Focus management between matches
+
+#### v1.0.3
+
+- [ ] "Why this ranking?" insights
+- [ ] Social sharing functionality
+- [ ] Improve ranking algorithm, there are still a lot of draws (possibly due to tie match feature)
+
+#### v1.0.4
+
+- [ ] Smooth transitions between matches
+- [ ] Result reveal animations
+- [ ] Progress bar animations
+
+#### v1.1.0
+
+- [ ] Meta tags for social sharing
+- [ ] Open Graph images
+- [ ] Analytics setup (optional)
+- [ ] Social preview for GitHub
+- [ ] Legal things? (privacy policy? whatever etc.)
+
+#### DX
+
+- [ ] Tests for new features (each patch)
+- [ ] Deploy each patch independently
 
 ### v2
 

@@ -89,7 +89,7 @@ function App() {
         </div>
         <Button
           variant="link"
-          className="text-muted-foreground font-normal text-sm place-self-center"
+          className="text-muted-foreground focus:ring text-sm place-self-center"
           onClick={() => tieMatch(matchingPair)}>
           I don't care about any of them
         </Button>

@@ -1,16 +1,19 @@
 import { getFrameworksRanking } from "@/lib/utils";
-import { useAppSelector } from "@/redux/hooks";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { scoresSelector } from "@/redux/selectors";
 import type { FC } from "react";
 import { Text } from "./ui/text";
+import { Button } from "./ui/button";
+import { resetGame } from "@/redux/scoresSlice";
 
 export const Results: FC = () => {
+  const dispatch = useAppDispatch();
   const scores = useAppSelector(scoresSelector);
   const ranking = getFrameworksRanking(scores);
   const frameworkNameClass = (rank: number) => {
     switch (rank) {
       case 0:
-        return "text-4xl font-bold tracking-wider";
+        return "text-4xl font-black";
       case 1:
         return "text-3xl font-semibold";
       case 2:
@@ -18,6 +21,10 @@ export const Results: FC = () => {
       default:
         return "text-md font-light";
     }
+  };
+
+  const restartGame = () => {
+    dispatch(resetGame());
   };
 
   return (
@@ -38,7 +45,7 @@ export const Results: FC = () => {
                 aria-labelledby={framework.framework.id}
                 src={framework.framework.logo}
                 width="24"
-                className="inline-block mr-4"
+                className="inline-block mr-4 max-sm:hidden"
               />
               <span
                 className={frameworkNameClass(index)}
@@ -52,6 +59,7 @@ export const Results: FC = () => {
           </li>
         ))}
       </ul>
+      <Button onClick={restartGame}>Play again!</Button>
     </>
   );
 };

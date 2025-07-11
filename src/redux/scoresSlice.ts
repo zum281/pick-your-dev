@@ -42,7 +42,7 @@ export const scoresSlice = createSlice({
       state,
       action: PayloadAction<{ framework: FeFrameworkKey; scoreChange: number }>,
     ) => {
-      state.scores[action.payload.framework] -= action.payload.scoreChange;
+      state.scores[action.payload.framework] += action.payload.scoreChange;
     },
     updateCurrentRound: (state) => {
       state.currentRound += 1;
@@ -50,9 +50,15 @@ export const scoresSlice = createSlice({
     updateHistory: (state, action: PayloadAction<MatchHistory>) => {
       state.history.push(action.payload);
     },
+    resetGame: () => initialState,
   },
 });
 
-export const { winMatch, loseMatch, updateCurrentRound, updateHistory } =
-  scoresSlice.actions;
+export const {
+  winMatch,
+  loseMatch,
+  updateCurrentRound,
+  updateHistory,
+  resetGame,
+} = scoresSlice.actions;
 export const scoresReducer = scoresSlice.reducer;
