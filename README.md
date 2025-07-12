@@ -37,6 +37,7 @@ As we all know, the most important thing you need to find your place in the fron
 - [ ] "Why this ranking?" insights
 - [ ] Social sharing functionality
 - [ ] Improve ranking algorithm, there are still a lot of draws (possibly due to tie match feature)
+- [ ] Fix vitest-axe compatibility with Bun (investigate Node.js alternative or axe-core direct integration)
 
 #### v1.0.4
 
