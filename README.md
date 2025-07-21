@@ -31,7 +31,7 @@ As we all know, the most important thing you need to find your place in the fron
 
 ### In progress
 
-- [ ] Feature: Save my results (image download)
+- [ ] Improve ranking algorithm, there are still a lot of draws (possibly due to tie match feature)
 
 ---
 
@@ -47,13 +47,13 @@ As we all know, the most important thing you need to find your place in the fron
 - [ ] A11y: Screen reader support
 - [ ] A11y: Focus management between matches
 - [ ] Feature: "Why this ranking?" insights
-- [ ] Improve ranking algorithm, there are still a lot of draws (possibly due to tie match feature)
 - [ ] Bug: Fix vitest-axe compatibility with Bun (investigate Node.js alternative or axe-core direct integration)
 - [ ] Feature: Backend quiz
 - [ ] Feature: Programming language quiz
 - [ ] Feature: Auth
 - [ ] Feature: Profile page
 - [ ] Feature: Save results of quizzes to db
+- [ ] Feature: Save my results (image download)
 - [ ] Feature: Social sharing functionality
 - [ ] Feature: Show summary ("your stack") in profile page
 - [ ] Feature: Retake quiz

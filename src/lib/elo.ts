@@ -13,8 +13,8 @@ export const calculateScoreChanges = ({
   const expectedLoser = 1 - expectedWinner;
 
   // Calculate actual changes
-  const winnerChange = Math.round(kFactor * (1 - expectedWinner));
-  const loserChange = Math.round(kFactor * (0 - expectedLoser));
+  const winnerChange = kFactor * (1 - expectedWinner);
+  const loserChange = kFactor * (0 - expectedLoser);
 
   return { winnerChange, loserChange };
 };

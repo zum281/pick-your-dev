@@ -57,7 +57,7 @@ export const Results: FC = () => {
               </span>
             </div>
             <span className="text-muted-foreground text-xs place-self-end">
-              {framework.score}
+              {Math.round(framework.score)}
             </span>
           </li>
         ))}
