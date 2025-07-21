@@ -2,11 +2,13 @@ import { getFrameworksRanking } from "@/lib/utils";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { scoresSelector } from "@/redux/selectors";
 import type { FC } from "react";
-import { Text } from "./ui/text";
-import { Button } from "./ui/button";
+import { Text } from "@/components/ui/text";
+import { Button } from "@/components/ui/button";
 import { resetGame } from "@/redux/scoresSlice";
+import { useLocation } from "wouter";
 
 export const Results: FC = () => {
+  const [, navigate] = useLocation();
   const dispatch = useAppDispatch();
   const scores = useAppSelector(scoresSelector);
   const ranking = getFrameworksRanking(scores);
@@ -25,6 +27,7 @@ export const Results: FC = () => {
 
   const restartGame = () => {
     dispatch(resetGame());
+    navigate("/");
   };
 
   return (
