@@ -31,7 +31,7 @@ As we all know, the most important thing you need to find your place in the fron
 
 ### In progress
 
-- [ ] Feature: Social sharing functionality
+- [ ] Feature: Save my results (image download)
 
 ---
 
@@ -54,6 +54,7 @@ As we all know, the most important thing you need to find your place in the fron
 - [ ] Feature: Auth
 - [ ] Feature: Profile page
 - [ ] Feature: Save results of quizzes to db
+- [ ] Feature: Social sharing functionality
 - [ ] Feature: Show summary ("your stack") in profile page
 - [ ] Feature: Retake quiz
 - [ ] Feature: History of quizzes played = graph per quiz with history of results
