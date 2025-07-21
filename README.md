@@ -19,19 +19,17 @@ As we all know, the most important thing you need to find your place in the fron
 - [x] Keyboard navigation for quiz interactions
 - [x] Restart quiz button
 - [x] Hover/active states polish
+- [x] Routing
+- [x] UI: Custom 404 page
+- [x] Improve ranking algorithm, there are still a lot of draws (possibly due to tie match feature)
 
 ---
 
 ### To be released
 
-- [x] Routing
-- [x] UI: Custom 404 page
-
 ---
 
 ### In progress
-
-- [ ] Improve ranking algorithm, there are still a lot of draws (possibly due to tie match feature)
 
 ---
 
