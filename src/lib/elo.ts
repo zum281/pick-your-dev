@@ -18,3 +18,22 @@ export const calculateScoreChanges = ({
 
   return { winnerChange, loserChange };
 };
+
+export const calculateTieChanges = ({
+  playerAScore,
+  playerBScore,
+  kFactor = 32,
+}: {
+  playerAScore: number;
+  playerBScore: number;
+  kFactor?: number;
+}): { playerAChange: number; playerBChange: number } => {
+  const expectedA = 1 / (1 + Math.pow(10, (playerBScore - playerAScore) / 400));
+  const expectedB = 1 - expectedA;
+
+  // Each player gets 0.5 points (halfway between win=1 and loss=0)
+  const playerAChange = kFactor * (0.5 - expectedA);
+  const playerBChange = kFactor * (0.5 - expectedB);
+
+  return { playerAChange, playerBChange };
+};

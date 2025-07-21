@@ -12,7 +12,7 @@ import {
 } from "@/redux/selectors";
 import type { FeFrameworkKey, FeFrameworkPair, MatchHistory } from "@/types";
 import { getNextMatch } from "@/lib/next-match";
-import { calculateScoreChanges } from "@/lib/elo";
+import { calculateScoreChanges, calculateTieChanges } from "@/lib/elo";
 import { Progress } from "@/components/ui/progress";
 import { MAX_ROUNDS } from "@/config";
 import { MatchCard } from "@/components/MatchCard";
@@ -31,6 +31,20 @@ export const FrontEndQuiz: FC = () => {
   const matchingPair = getNextMatch({ scores, history, currentRound });
 
   const tieMatch = (pair: FeFrameworkPair) => {
+    const playerA = matchingPair![0];
+    const playerB = matchingPair![1];
+    const { playerAChange, playerBChange } = calculateTieChanges({
+      playerAScore: scores[playerA],
+      playerBScore: scores[playerB],
+    });
+
+    if (playerAChange >= 0)
+      winMatch({ framework: playerA, scoreChange: playerAChange });
+    else loseMatch({ framework: playerA, scoreChange: playerAChange });
+    if (playerBChange >= 0)
+      winMatch({ framework: playerB, scoreChange: playerBChange });
+    else loseMatch({ framework: playerB, scoreChange: playerBChange });
+
     dispatch(updateCurrentRound());
     const matchup: MatchHistory = {
       pair,
@@ -39,6 +53,7 @@ export const FrontEndQuiz: FC = () => {
     };
     dispatch(updateHistory(matchup));
   };
+
   const playMatch = (winnerId: FeFrameworkKey, loserId: FeFrameworkKey) => {
     const scoreChanges = calculateScoreChanges({
       winnerScore: scores[winnerId],
