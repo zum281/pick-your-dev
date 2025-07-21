@@ -4,7 +4,7 @@ As we all know, the most important thing you need to find your place in the fron
 
 ## Roadmap
 
-### v1
+### Released
 
 - [x] User click changes score
 - [x] Update cards every match
@@ -15,70 +15,45 @@ As we all know, the most important thing you need to find your place in the fron
 - [x] UI improvements - Results
 - [x] Better logos
 - [x] Tests setup
-- [x] Deploy
-
-### v1.1
-
-#### v1.0.1
-
-- [x] Mobile responsiveness
+- [x] Color contrast validation
 - [x] Keyboard navigation for quiz interactions
 - [x] Restart quiz button
 - [x] Hover/active states polish
+- [x] Routing
+- [x] UI: Custom 404 page
+- [x] Improve ranking algorithm, there are still a lot of draws (possibly due to tie match feature)
 
-#### v1.0.2
+---
 
-- [ ] Screen reader support
-- [ ] Color contrast validation
-- [ ] Focus management between matches
+### To be released
 
-#### v1.0.3
+---
 
-- [ ] "Why this ranking?" insights
-- [ ] Social sharing functionality
-- [ ] Improve ranking algorithm, there are still a lot of draws (possibly due to tie match feature)
+### In progress
 
-#### v1.0.4
+---
 
-- [ ] Smooth transitions between matches
-- [ ] Result reveal animations
-- [ ] Progress bar animations
+### The eternal backlog
 
-#### v1.1.0
-
-- [ ] Meta tags for social sharing
-- [ ] Open Graph images
-- [ ] Analytics setup (optional)
-- [ ] Social preview for GitHub
-- [ ] Legal things? (privacy policy? whatever etc.)
-
-#### DX
-
-- [ ] Tests for new features (each patch)
-- [ ] Deploy each patch independently
-
-### v2
-
-- [ ] Routing
-- [ ] Backend quiz
-- [ ] Programming language quiz
-- [ ] Select quiz page
-- [ ] Tests
-- [ ] Deploy
-
-### v3
-
-- [ ] Auth
-- [ ] Profile page
-- [ ] Save results of quizzes to db
-- [ ] Show summary ("your stack") in profile page
-- [ ] Retake quiz
-- [ ] Tests
-- [ ] Deploy
-
-### v4
-
-- [ ] History of quizzes played = graph per quiz with history of results
-- [ ] Filter options on quizzes
-- [ ] Tests
-- [ ] Deploy
+- [ ] Animation: Smooth transitions between matches
+- [ ] Animation: Result reveal animations
+- [ ] Animation: Progress bar animations
+- [ ] SEO: Open Graph images
+- [ ] Misc: Analytics setup (optional)
+- [ ] Misc: Social preview for GitHub
+- [ ] SEO: Meta tags for social sharing
+- [ ] A11y: Screen reader support
+- [ ] A11y: Focus management between matches
+- [ ] Feature: "Why this ranking?" insights
+- [ ] Bug: Fix vitest-axe compatibility with Bun (investigate Node.js alternative or axe-core direct integration)
+- [ ] Feature: Backend quiz
+- [ ] Feature: Programming language quiz
+- [ ] Feature: Auth
+- [ ] Feature: Profile page
+- [ ] Feature: Save results of quizzes to db
+- [ ] Feature: Save my results (image download)
+- [ ] Feature: Social sharing functionality
+- [ ] Feature: Show summary ("your stack") in profile page
+- [ ] Feature: Retake quiz
+- [ ] Feature: History of quizzes played = graph per quiz with history of results
+- [ ] Feature: Filter options on quizzes
