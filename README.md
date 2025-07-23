@@ -25,11 +25,6 @@ As we all know, the most important thing you need to find your place in the fron
 - [x] A11y: Focus management between matches
 - [x] A11y: fixes
 - [x] Support for Vercel Analytics
-
----
-
-### To be released
-
 - [x] Fix: minor performance fixes
 - [x] SEO: Favicon
 - [x] SEO: Better title
@@ -37,6 +32,10 @@ As we all know, the most important thing you need to find your place in the fron
 - [x] Test: a11y tests setup (automatic)
 - [x] Test: a11y tests (manual)
 - [x] A11y: screen reader testing setup
+
+---
+
+### To be released
 
 ---
 
