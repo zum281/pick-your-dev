@@ -117,6 +117,7 @@ export const FrontEndQuiz: FC = () => {
         <Progress
           value={progressValue}
           className="absolute top-0 border-none"
+          title="Game progress"
         />,
         document.body,
       )}
