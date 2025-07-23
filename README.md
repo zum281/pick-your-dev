@@ -34,6 +34,7 @@ As we all know, the most important thing you need to find your place in the fron
 ### In progress
 
 - [ ] Fix: minor performance fixes
+- [ ] A11y: fixes
 - [x] Support for Vercel Analytics
 
 ---

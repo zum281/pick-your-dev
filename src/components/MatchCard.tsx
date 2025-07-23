@@ -11,7 +11,8 @@ export const MatchCard = forwardRef<HTMLButtonElement, MatchCardProps>(
       <button ref={ref} onClick={onSelect}>
         <Card className="space-y-2 p-4 cursor-pointer">
           <img
-            aria-labelledby={framework.id}
+            role="presentation"
+            alt=""
             src={framework.logo}
             height="128"
             className="aspect-square h-32"
