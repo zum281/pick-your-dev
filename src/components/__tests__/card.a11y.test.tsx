@@ -1,5 +1,6 @@
-import { Card } from "@/components/ui/card";
-import { renderAndCheckA11y } from "@/lib/test-utils/a11y";
+import React from "react";
+import { Card } from "../ui/card";
+import { renderAndCheckA11y } from "../../lib/test-utils/a11y";
 
 describe("Card Accessibility", () => {
   test("should not have accessibility violations", async () => {

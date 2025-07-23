@@ -1,6 +1,7 @@
 import { render } from "@testing-library/react";
 import { virtual } from "@guidepup/virtual-screen-reader";
-import { Progress } from "@/components/ui/progress";
+import { Progress } from "../ui/progress";
+import React from "react";
 
 describe("Progress Screen Reader Tests", () => {
   afterEach(async () => {

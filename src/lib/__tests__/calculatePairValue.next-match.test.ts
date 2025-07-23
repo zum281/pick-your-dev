@@ -4,7 +4,7 @@ import type {
   FeFrameworkPair,
   GameState,
   MatchHistory,
-} from "@/types";
+} from "../../types";
 import { calculatePairValue } from "../next-match";
 
 const createGameState = (

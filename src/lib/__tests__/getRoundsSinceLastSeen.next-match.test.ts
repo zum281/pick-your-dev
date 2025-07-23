@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import type { FeFrameworkKey, MatchHistory } from "@/types";
+import type { FeFrameworkKey, MatchHistory } from "../../types";
 import { getRoundsSinceLastSeen } from "../next-match";
 
 describe("getRoundsSinceLastSeen", () => {
