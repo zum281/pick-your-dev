@@ -1,5 +1,6 @@
-import { Text } from "@/components/ui/text";
-import { renderAndCheckA11y } from "@/lib/test-utils/a11y";
+import React from "react";
+import { Text } from "../ui/text";
+import { renderAndCheckA11y } from "../../lib/test-utils/a11y";
 
 describe("Text Accessibility", () => {
   test("should not have accessibility violations", async () => {

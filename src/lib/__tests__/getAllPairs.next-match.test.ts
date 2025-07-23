@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import type { FeFrameworkKey } from "@/types";
+import type { FeFrameworkKey } from "../../types";
 import { getAllPairs } from "../next-match";
 
 describe("getAllPairs", () => {

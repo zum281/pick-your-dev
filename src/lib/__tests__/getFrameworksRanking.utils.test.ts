@@ -1,7 +1,7 @@
-import { ALL_FE_FRAMEWORKS } from "@/config";
+import { ALL_FE_FRAMEWORKS } from "../../config";
 import { describe, it, expect } from "vitest";
 import { getFrameworkFromId, getFrameworksRanking } from "../utils";
-import type { FeFrameworkKey } from "@/types";
+import type { FeFrameworkKey } from "../../types";
 
 const createFullScoresObject = (
   partialScores: Partial<Record<FeFrameworkKey, number>>,

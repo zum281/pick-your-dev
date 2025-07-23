@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import type { FeFrameworkPair } from "@/types";
+import type { FeFrameworkPair } from "../../types";
 import { normalizePair } from "../next-match";
 
 describe("normalizePair", () => {

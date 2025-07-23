@@ -4,8 +4,8 @@ import type {
   FeFrameworkPair,
   GameState,
   MatchHistory,
-} from "@/types";
-import { ALL_FE_FRAMEWORKS } from "@/config";
+} from "../../types";
+import { ALL_FE_FRAMEWORKS } from "../../config";
 import { getNextMatch } from "../next-match";
 
 // Helper function to create test game states

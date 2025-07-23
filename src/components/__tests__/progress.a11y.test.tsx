@@ -1,5 +1,6 @@
-import { Progress } from "@/components/ui/progress";
-import { renderAndCheckA11y } from "@/lib/test-utils/a11y";
+import { Progress } from "../ui/progress";
+import { renderAndCheckA11y } from "../../lib/test-utils/a11y";
+import React from "react";
 
 describe("Progress Accessibility", () => {
   test("should not have accessibility violations", async () => {

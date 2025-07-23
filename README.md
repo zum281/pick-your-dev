@@ -41,11 +41,12 @@ As we all know, the most important thing you need to find your place in the fron
 
 ### In progress
 
+- [ ] Feature: "Why this ranking?" insights
+
 ---
 
 ### The eternal backlog
 
-- [ ] Feature: "Why this ranking?" insights
 - [ ] A11y: test screen reader support
 - [ ] Animation: Smooth transitions between matches
 - [ ] Animation: Result reveal animations
