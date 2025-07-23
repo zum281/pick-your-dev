@@ -33,13 +33,15 @@ As we all know, the most important thing you need to find your place in the fron
 
 ### In progress
 
-- [ ] Feature: "Why this ranking?" insights
-- [ ] A11y: Screen reader support
+- [ ] Fix: minor performance fixes
+- [x] Support for Vercel Analytics
 
 ---
 
 ### The eternal backlog
 
+- [ ] Feature: "Why this ranking?" insights
+- [ ] A11y: Screen reader support
 - [ ] SEO: Favicon
 - [ ] SEO: Better title
 - [ ] SEO: Better description
