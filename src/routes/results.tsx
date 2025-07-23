@@ -1,16 +1,22 @@
 import { getFrameworksRanking } from "@/lib/utils";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import { scoresSelector } from "@/redux/selectors";
+import { historySelector, scoresSelector } from "@/redux/selectors";
 import type { FC } from "react";
 import { Text } from "@/components/ui/text";
 import { Button } from "@/components/ui/button";
 import { resetGame } from "@/redux/scoresSlice";
 import { useLocation } from "wouter";
+import type { FeFrameworkKey, GameState } from "@/types";
+import {
+  generateFrameworkInsights,
+  generateTooltipContent,
+} from "@/lib/ranking-insights.utils";
 
 export const Results: FC = () => {
   const [, navigate] = useLocation();
   const dispatch = useAppDispatch();
   const scores = useAppSelector(scoresSelector);
+  const history = useAppSelector(historySelector);
   const ranking = getFrameworksRanking(scores);
   const frameworkNameClass = (rank: number) => {
     switch (rank) {
@@ -28,6 +34,17 @@ export const Results: FC = () => {
   const restartGame = () => {
     dispatch(resetGame());
     navigate("/");
+  };
+
+  const getInsightsTooltip = (
+    framework: FeFrameworkKey,
+    history: GameState["history"],
+  ) => {
+    const insights = generateFrameworkInsights(framework, history, scores);
+    const tooltipContent = generateTooltipContent(insights);
+
+    // Format as a single string for the title attribute
+    return `${tooltipContent.title}\n${tooltipContent.stats.join("\n")}`;
   };
 
   return (
@@ -56,6 +73,11 @@ export const Results: FC = () => {
                 id={framework.framework.id}>
                 {framework.framework.name}
               </span>
+              <button
+                className="ml-2 text-muted-foreground hover:text-foreground text-xs"
+                title={getInsightsTooltip(framework.framework.id, history)}>
+                ⓘ
+              </button>
             </div>
             <span className="text-muted-foreground text-xs place-self-end">
               {Math.round(framework.score)}
