@@ -1,0 +1,21 @@
+{
+  "name": "Pick Your Dev",
+  "short_name": "PYD",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#FFDB32",
+  "background_color": "#FFF",
+  "start_url": "/",
+  "display": "standalone",
+  "description": "Find answers to the important questions, like 'Do I prefer React or Svelte?'"
+}

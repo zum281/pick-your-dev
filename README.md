@@ -31,21 +31,20 @@ As we all know, the most important thing you need to find your place in the fron
 ### To be released
 
 - [x] Fix: minor performance fixes
+- [x] SEO: Favicon
+- [x] SEO: Better title
+- [x] SEO: Better description
 
 ---
 
 ### In progress
-
-- [ ] SEO: Favicon
 
 ---
 
 ### The eternal backlog
 
 - [ ] Feature: "Why this ranking?" insights
-- [ ] A11y: Screen reader support
-- [ ] SEO: Better title
-- [ ] SEO: Better description
+- [ ] A11y: test screen reader support
 - [ ] Animation: Smooth transitions between matches
 - [ ] Animation: Result reveal animations
 - [ ] Animation: Progress bar animations
