@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
+    "@guidepup/virtual-screen-reader": "^0.32.1",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@types/node": "^22.15.24",

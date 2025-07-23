@@ -36,6 +36,7 @@ As we all know, the most important thing you need to find your place in the fron
 - [x] SEO: Better description
 - [x] Test: a11y tests setup (automatic)
 - [x] Test: a11y tests (manual)
+- [x] A11y: screen reader testing setup
 
 ---
 
