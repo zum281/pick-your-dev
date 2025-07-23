@@ -39,6 +39,9 @@ As we all know, the most important thing you need to find your place in the fron
 
 ### In progress
 
+- [x] Test: a11y tests setup (automatic)
+- [ ] Test: a11y tests (manual)
+
 ---
 
 ### The eternal backlog
@@ -52,7 +55,6 @@ As we all know, the most important thing you need to find your place in the fron
 - [ ] Misc: Analytics setup (optional)
 - [ ] Misc: Social preview for GitHub
 - [ ] SEO: Meta tags for social sharing
-- [ ] Bug: Fix vitest-axe compatibility with Bun (investigate Node.js alternative or axe-core direct integration)
 - [ ] Feature: Backend quiz
 - [ ] Feature: Programming language quiz
 - [ ] Feature: Auth
