@@ -34,13 +34,12 @@ As we all know, the most important thing you need to find your place in the fron
 - [x] SEO: Favicon
 - [x] SEO: Better title
 - [x] SEO: Better description
+- [x] Test: a11y tests setup (automatic)
+- [x] Test: a11y tests (manual)
 
 ---
 
 ### In progress
-
-- [x] Test: a11y tests setup (automatic)
-- [ ] Test: a11y tests (manual)
 
 ---
 

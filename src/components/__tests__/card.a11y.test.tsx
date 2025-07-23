@@ -1,10 +1,9 @@
-import { render } from "@testing-library/react";
-import { run as axe } from "axe-core";
-import { Card } from "../ui/card";
+import { Card } from "@/components/ui/card";
+import { renderAndCheckA11y } from "@/lib/test-utils/a11y";
 
 describe("Card Accessibility", () => {
   test("should not have accessibility violations", async () => {
-    const { container } = render(
+    renderAndCheckA11y(
       <Card>
         <Card.Header>
           <Card.Title>Title</Card.Title>
@@ -13,25 +12,5 @@ describe("Card Accessibility", () => {
         <Card.Content>Content</Card.Content>
       </Card>,
     );
-
-    const results = await axe(container);
-
-    if (results.violations.length > 0) {
-      const violationMessages = results.violations
-        .map((violation) => {
-          const nodeMessages = violation.nodes
-            .map((node) => `  - ${node.html}\n    ${node.failureSummary}`)
-            .join("\n");
-
-          return `${violation.id}: ${violation.description}\n${nodeMessages}`;
-        })
-        .join("\n\n");
-
-      throw new Error(
-        `Accessibility violations found:\n\n${violationMessages}`,
-      );
-    }
-
-    expect(results.violations).toHaveLength(0);
   });
 });
