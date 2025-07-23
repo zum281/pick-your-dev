@@ -22,20 +22,21 @@ As we all know, the most important thing you need to find your place in the fron
 - [x] Routing
 - [x] UI: Custom 404 page
 - [x] Improve ranking algorithm, there are still a lot of draws (possibly due to tie match feature)
+- [x] A11y: Focus management between matches
+- [x] A11y: fixes
+- [x] Support for Vercel Analytics
 
 ---
 
 ### To be released
 
-- [x] A11y: Focus management between matches
+- [x] Fix: minor performance fixes
 
 ---
 
 ### In progress
 
-- [ ] Fix: minor performance fixes
-- [ ] A11y: fixes
-- [x] Support for Vercel Analytics
+- [ ] SEO: Favicon
 
 ---
 
@@ -43,7 +44,6 @@ As we all know, the most important thing you need to find your place in the fron
 
 - [ ] Feature: "Why this ranking?" insights
 - [ ] A11y: Screen reader support
-- [ ] SEO: Favicon
 - [ ] SEO: Better title
 - [ ] SEO: Better description
 - [ ] Animation: Smooth transitions between matches
