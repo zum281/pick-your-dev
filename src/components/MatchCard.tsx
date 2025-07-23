@@ -16,6 +16,7 @@ export const MatchCard = forwardRef<HTMLButtonElement, MatchCardProps>(
             src={framework.logo}
             height="128"
             className="aspect-square h-32"
+            fetchPriority="high"
           />
           <Text id={framework.id} className="text-center font-medium">
             {framework.name}

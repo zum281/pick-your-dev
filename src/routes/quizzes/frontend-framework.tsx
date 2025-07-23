@@ -118,6 +118,7 @@ export const FrontEndQuiz: FC = () => {
           value={progressValue}
           className="absolute top-0 border-none"
           title="Game progress"
+          aria-live="polite"
         />,
         document.body,
       )}

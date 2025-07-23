@@ -4,7 +4,7 @@ import viteConfig from "./vite.config";
 export default defineConfig({
   ...viteConfig,
   test: {
-    environment: "jsdom",
+    environment: "happy-dom",
     globals: true,
     coverage: {
       reporter: ["text", "html"],

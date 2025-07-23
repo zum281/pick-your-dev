@@ -22,30 +22,31 @@ As we all know, the most important thing you need to find your place in the fron
 - [x] Routing
 - [x] UI: Custom 404 page
 - [x] Improve ranking algorithm, there are still a lot of draws (possibly due to tie match feature)
+- [x] A11y: Focus management between matches
+- [x] A11y: fixes
+- [x] Support for Vercel Analytics
+- [x] Fix: minor performance fixes
+- [x] SEO: Favicon
+- [x] SEO: Better title
+- [x] SEO: Better description
+- [x] Test: a11y tests setup (automatic)
+- [x] Test: a11y tests (manual)
+- [x] A11y: screen reader testing setup
 
 ---
 
 ### To be released
 
-- [x] A11y: Focus management between matches
-
 ---
 
 ### In progress
-
-- [ ] Fix: minor performance fixes
-- [ ] A11y: fixes
-- [x] Support for Vercel Analytics
 
 ---
 
 ### The eternal backlog
 
 - [ ] Feature: "Why this ranking?" insights
-- [ ] A11y: Screen reader support
-- [ ] SEO: Favicon
-- [ ] SEO: Better title
-- [ ] SEO: Better description
+- [ ] A11y: test screen reader support
 - [ ] Animation: Smooth transitions between matches
 - [ ] Animation: Result reveal animations
 - [ ] Animation: Progress bar animations
@@ -53,7 +54,6 @@ As we all know, the most important thing you need to find your place in the fron
 - [ ] Misc: Analytics setup (optional)
 - [ ] Misc: Social preview for GitHub
 - [ ] SEO: Meta tags for social sharing
-- [ ] Bug: Fix vitest-axe compatibility with Bun (investigate Node.js alternative or axe-core direct integration)
 - [ ] Feature: Backend quiz
 - [ ] Feature: Programming language quiz
 - [ ] Feature: Auth
