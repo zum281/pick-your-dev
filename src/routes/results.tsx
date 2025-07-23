@@ -45,7 +45,8 @@ export const Results: FC = () => {
                 {index + 1}.
               </span>
               <img
-                aria-labelledby={framework.framework.id}
+                role="presentation"
+                alt=""
                 src={framework.framework.logo}
                 width="24"
                 className="inline-block mr-4 max-sm:hidden"

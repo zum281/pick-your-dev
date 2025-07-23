@@ -27,14 +27,25 @@ As we all know, the most important thing you need to find your place in the fron
 
 ### To be released
 
+- [x] A11y: Focus management between matches
+
 ---
 
 ### In progress
+
+- [ ] Fix: minor performance fixes
+- [ ] A11y: fixes
+- [x] Support for Vercel Analytics
 
 ---
 
 ### The eternal backlog
 
+- [ ] Feature: "Why this ranking?" insights
+- [ ] A11y: Screen reader support
+- [ ] SEO: Favicon
+- [ ] SEO: Better title
+- [ ] SEO: Better description
 - [ ] Animation: Smooth transitions between matches
 - [ ] Animation: Result reveal animations
 - [ ] Animation: Progress bar animations
@@ -42,9 +53,6 @@ As we all know, the most important thing you need to find your place in the fron
 - [ ] Misc: Analytics setup (optional)
 - [ ] Misc: Social preview for GitHub
 - [ ] SEO: Meta tags for social sharing
-- [ ] A11y: Screen reader support
-- [ ] A11y: Focus management between matches
-- [ ] Feature: "Why this ranking?" insights
 - [ ] Bug: Fix vitest-axe compatibility with Bun (investigate Node.js alternative or axe-core direct integration)
 - [ ] Feature: Backend quiz
 - [ ] Feature: Programming language quiz

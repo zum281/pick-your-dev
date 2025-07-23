@@ -19,6 +19,7 @@ import { MatchCard } from "@/components/MatchCard";
 import { Text } from "@/components/ui/text";
 import { Button } from "@/components/ui/button";
 import type { FC } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "wouter";
 import { createPortal } from "react-dom";
 
@@ -29,6 +30,7 @@ export const FrontEndQuiz: FC = () => {
   const history = useAppSelector(historySelector);
   const currentRound = useAppSelector(currentRoundSelector);
   const matchingPair = getNextMatch({ scores, history, currentRound });
+  const firstCardRef = useRef<HTMLButtonElement>(null);
 
   const tieMatch = (pair: FeFrameworkPair) => {
     const playerA = matchingPair![0];
@@ -77,6 +79,12 @@ export const FrontEndQuiz: FC = () => {
 
   const progressValue = (currentRound * 100) / MAX_ROUNDS;
 
+  useEffect(() => {
+    if (firstCardRef.current) {
+      firstCardRef.current.focus();
+    }
+  }, [matchingPair]);
+
   if (!matchingPair) {
     navigate("/results");
     return;
@@ -92,6 +100,7 @@ export const FrontEndQuiz: FC = () => {
           <MatchCard
             key={framework}
             frameworkId={framework}
+            ref={index === 0 ? firstCardRef : undefined}
             onSelect={() =>
               playMatch(matchingPair[index], matchingPair[index === 0 ? 1 : 0])
             }
@@ -108,6 +117,7 @@ export const FrontEndQuiz: FC = () => {
         <Progress
           value={progressValue}
           className="absolute top-0 border-none"
+          title="Game progress"
         />,
         document.body,
       )}
