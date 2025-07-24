@@ -73,15 +73,18 @@ export const Results: FC = () => {
                 id={framework.framework.id}>
                 {framework.framework.name}
               </span>
+            </div>
+            <div className="place-self-end flex items-center gap-1">
+              <span className="text-muted-foreground text-xs ">
+                {Math.round(framework.score)}
+              </span>
+
               <button
-                className="ml-2 text-muted-foreground hover:text-foreground text-xs"
+                className="text-muted-foreground hover:text-foreground text-xs"
                 title={getInsightsTooltip(framework.framework.id, history)}>
                 ⓘ
               </button>
             </div>
-            <span className="text-muted-foreground text-xs place-self-end">
-              {Math.round(framework.score)}
-            </span>
           </li>
         ))}
       </ul>
